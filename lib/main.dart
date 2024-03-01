@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 void main() {
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (_) => CustomerDetailsProvider())
-  ], child: MyApp()));
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routes: {
-        "/": (context) => LoginPage(),
-        MyRouts.homeRoute: (context) => MyHomePage(),
+        "/": (context) => const LoginPage(),
+        MyRouts.homeRoute: (context) => const MyHomePage(),
       },
     );
   }
